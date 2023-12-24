@@ -1,4 +1,6 @@
 const imgs = document.getElementById("imgs");
+const rightBtn = document.getElementById("right");
+const leftBtn = document.getElementById("left");
 
 const img = document.querySelectorAll("#imgs img");
 
@@ -20,3 +22,21 @@ function changeImage() {
 
   imgs.style.transform = `translateX(${-idx * 500}px)`;
 }
+
+function resetInterval() {
+  clearInterval(interval);
+  interval = setInterval(run, 2000);
+}
+
+rightBtn.addEventListener("click", () => {
+  idx++;
+
+  changeImage();
+  resetInterval();
+});
+leftBtn.addEventListener("click", () => {
+  idx--;
+
+  changeImage();
+  resetInterval();
+});
