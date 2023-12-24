@@ -28,8 +28,8 @@ img {
 
 .image-container {
   display: flex;
-  transform: translate(0);
-  transition: transform 0.4s ease-in-out;
+  transform: translateX(0);
+  transition: transform 0.6s ease-in-out;
 }
 
 .buttons-container {
